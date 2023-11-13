@@ -20,6 +20,7 @@ public class UserEntity implements UserDetails {//para usar en securitybeans el 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUser;
 
+    @Column(unique = true) //el username tiene que ser unico
     private String userName;
 
     private String name;
