@@ -1,6 +1,6 @@
 package com.jwt.springsecurity.service;
 
-import com.jwt.springsecurity.dto.CategoryDto;
+import com.jwt.springsecurity.dto.request.CategoryDto;
 import com.jwt.springsecurity.persistence.entity.CategoryEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

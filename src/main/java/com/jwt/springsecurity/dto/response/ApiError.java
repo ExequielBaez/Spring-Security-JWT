@@ -1,4 +1,4 @@
-package com.jwt.springsecurity.dto;
+package com.jwt.springsecurity.dto.response;
 
 import lombok.Data;
 import org.w3c.dom.stylesheets.LinkStyle;

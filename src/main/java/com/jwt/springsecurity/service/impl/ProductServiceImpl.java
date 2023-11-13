@@ -1,6 +1,6 @@
 package com.jwt.springsecurity.service.impl;
 
-import com.jwt.springsecurity.dto.ProductDto;
+import com.jwt.springsecurity.dto.request.ProductDto;
 import com.jwt.springsecurity.exception.ObjectNotFoundException;
 import com.jwt.springsecurity.persistence.entity.CategoryEntity;
 import com.jwt.springsecurity.persistence.entity.ProductEntity;

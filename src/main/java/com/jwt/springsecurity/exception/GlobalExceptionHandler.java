@@ -1,6 +1,6 @@
 package com.jwt.springsecurity.exception;
 
-import com.jwt.springsecurity.dto.ApiError;
+import com.jwt.springsecurity.dto.response.ApiError;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
