@@ -1,13 +1,10 @@
 package com.jwt.springsecurity.service.impl;
 
-import com.jwt.springsecurity.dto.CategoryDto;
-import com.jwt.springsecurity.dto.ProductDto;
+import com.jwt.springsecurity.dto.request.CategoryDto;
 import com.jwt.springsecurity.exception.ObjectNotFoundException;
 import com.jwt.springsecurity.persistence.entity.CategoryEntity;
-import com.jwt.springsecurity.persistence.entity.ProductEntity;
 import com.jwt.springsecurity.persistence.repository.CategoryRepository;
 import com.jwt.springsecurity.service.CategoryService;
-import com.jwt.springsecurity.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

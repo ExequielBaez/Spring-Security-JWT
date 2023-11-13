@@ -1,7 +1,7 @@
 package com.jwt.springsecurity.controller;
 
 
-import com.jwt.springsecurity.dto.ProductDto;
+import com.jwt.springsecurity.dto.request.ProductDto;
 import com.jwt.springsecurity.persistence.entity.ProductEntity;
 import com.jwt.springsecurity.service.ProductService;
 import jakarta.validation.Valid;

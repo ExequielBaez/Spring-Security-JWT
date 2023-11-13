@@ -1,10 +1,8 @@
 package com.jwt.springsecurity.controller;
 
 
-import com.jwt.springsecurity.dto.CategoryDto;
-import com.jwt.springsecurity.dto.ProductDto;
+import com.jwt.springsecurity.dto.request.CategoryDto;
 import com.jwt.springsecurity.persistence.entity.CategoryEntity;
-import com.jwt.springsecurity.persistence.entity.ProductEntity;
 import com.jwt.springsecurity.service.CategoryService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
