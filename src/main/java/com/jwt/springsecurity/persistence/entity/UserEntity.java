@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.security.SecureRandom;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Entity
@@ -36,7 +37,7 @@ public class UserEntity implements UserDetails {//para usar en securitybeans el 
 
         if(role.getPermissions() == null) return null;
 
-        return role.getPermissions().stream()
+        List<SimpleGrantedAuthority> authorities = role.getPermissions().stream()
                 .map(each -> each.name())
                 .map(each -> new SimpleGrantedAuthority(each))
                         //.map(each -> {
@@ -44,6 +45,10 @@ public class UserEntity implements UserDetails {//para usar en securitybeans el 
                         //return new SimpleGrantedAuthority(permission);
                    // })
                     .collect(Collectors.toList());
+
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + this.role.name()));
+        return authorities;
+
     }
 
     @Override

@@ -4,6 +4,7 @@ import com.jwt.springsecurity.dto.request.AuthenticationRequest;
 import com.jwt.springsecurity.dto.request.UserDto;
 import com.jwt.springsecurity.dto.response.AuthenticationResponse;
 import com.jwt.springsecurity.dto.response.RegisteredUserDto;
+import com.jwt.springsecurity.exception.ObjectNotFoundException;
 import com.jwt.springsecurity.persistence.entity.UserEntity;
 import com.jwt.springsecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,4 +86,18 @@ public class AuthenticationService {
         }
 
     }
+
+    public UserEntity findLoggedInUser() {
+        Authentication auth =
+                (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+
+        //auth instanceof UsernamePasswordAuthenticationToken authToken) {//aca esta parseando
+            //si auth es una instancia de usernamepassatuhtoken
+            //parsea auth a auhtToken
+            String userName = (String) auth.getPrincipal();
+
+            return  userService.findOneByUserName(userName)
+                    .orElseThrow( () -> new ObjectNotFoundException("User not found. Username: " +userName));
+        }
+
 }
